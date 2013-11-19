@@ -17,7 +17,7 @@ button. Simple click that button and join the hangout.
 2. Authorize gcalci by launching it
 3. Install [terminal-notifier](https://github.com/alloy/terminal-notifier)
 4. Clone this repo, tweak to your liking, and copy hangout-alert.rb to /some/path/hangout-alert
-5. Setup a cron job to run the script (e.g. 13,28,43,58  8-18  *  *  *  /some/path/hangouts)
+5. Setup a cron job to run the script (e.g. 13,28,43,58  8-18  *  *  *  /some/path/hangout-alert)
 
 In my example cron job in step 4 I'm running the script every day from 8am to 6pm, 2 minutes before the quarter hour.
 The idea is that most meetings will start on a quarter hour, and the 10 minute default alert I get from Calendar is
