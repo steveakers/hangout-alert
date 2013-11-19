@@ -21,4 +21,5 @@ button. Simple click that button and join the hangout.
 
 In my example cron job in step 4 I'm running the script every day from 8am to 6pm, 2 minutes before the quarter hour.
 The idea is that most meetings will start on a quarter hour, and the 10 minute default alert I get from Calendar is
-generally to far in advance (I always forget in about 5 minute.) 
+generally to far in advance. So following that up with an alert that provides the link just 2 minutes before the
+meeting works well for me.
