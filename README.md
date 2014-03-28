@@ -13,7 +13,7 @@ button. Simple click that button and join the hangout.
 
 ###INSTALLATION
 
-1. Install Muness' [fork of gcalci](https://github.com/muness/gcalcli)
+1. Install [gcalci](https://github.com/insanum/gcalcli)
 2. Authorize gcalci by launching it
 3. Install [terminal-notifier](https://github.com/alloy/terminal-notifier)
 4. Clone this repo, tweak to your liking, and copy hangout-alert.rb to /some/path/hangout-alert
