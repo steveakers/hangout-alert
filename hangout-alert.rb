@@ -2,7 +2,7 @@
 
 require 'time'
 
-meetings = %x[/usr/local/bin/gcalcli agenda --calendar 'Your Calendar' --tsv]
+meetings = `/usr/local/bin/gcalcli agenda --tsv --details all`
 
 meetings.force_encoding("UTF-8").split("\n").each do |line|
   row = line.split("\t")
@@ -14,9 +14,10 @@ meetings.force_encoding("UTF-8").split("\n").each do |line|
 
   time = Time.now
   link = hangout.length > 0 ? "#{hangout}" : "#{details}"
+  msg = hangout.length > 0 ? "Hangout" : "Meeting"
 
   if time <= start && time >= start - (5 * 60) 
-    msg = hangout.length > 0 ? "Hangout" : "Meeting"
-    %x[terminal-notifier -message '#{msg} starts at #{start.strftime('%l:%M')}.' -title '#{title}' -open '#{link}' -sound 'Basso']
+    `terminal-notifier -message '#{msg} starts at #{start.strftime('%l:%M')}.' -title '#{title}' -open '#{link}' -sound 'Basso'`
   end
+
 end
